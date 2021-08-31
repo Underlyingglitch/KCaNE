@@ -1,0 +1,55 @@
+doctype HTML
+html
+  head
+    title morsecode
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="http://www.bombmanual.com/web/img/module-icons/MorseCodeComponent.svg" width="200px")
+      h1 On The Subject of Morse Code
+      br
+      br
+      form(action="/morse_code" method="POST")
+        table(width="50%")
+          tr
+            th(height="50")
+                div(id="morseButtons" align="center")
+                  input(type='submit', name="e" value="." class="morse-word-box")
+                  input(type='submit', name="a" value=".-" class="morse-word-box")
+                  input(type='submit', name="r" value=".-." class="morse-word-box")
+                  input(type='submit', name="l" value=".-.." class="morse-word-box") 
+                  input(type='submit', name="i" value=".." class="morse-word-box")   
+          tr
+            th(height="50")
+                div(id="morseButtons" align="center")
+                  input(type='submit', name="f" value="..-." class="morse-word-box")
+                  input(type='submit', name="s" value="..." class="morse-word-box")
+                  input(type='submit', name="v" value="...-" class="morse-word-box")
+                  input(type='submit', name="h" value="...." class="morse-word-box")
+                  input(type='submit', name="t" value="-" class="morse-word-box") 
+          tr
+            th(height="50")
+                div(id="morseButtons" align="center")
+                  input(type='submit', name="k" value="-.-" class="morse-word-box")
+                  input(type='submit', name="c" value="-.-." class="morse-word-box")
+                  input(type='submit', name="x" value="-..-" class="morse-word-box")
+                  input(type='submit', name="b" value="-..." class="morse-word-box")
+                  input(type='submit', name="m" value="--" class="morse-word-box")
+          tr
+            th(height="50")
+                div(id="morseButtons" align="center")
+                  input(type='submit', name="g" value="--." class="morse-word-box")
+                  input(type='submit', name="o" value="---" class="morse-word-box") 
+                  input(type='submit', name="remove" value="X" class="morse-word-box")           
+          tr
+            td(height="50" )
+              div(id="wordoutField" align="center") #{wordInput}
+          tr
+            td(height="50" )
+              div(id="freqoutField" align="center") #{freqOutput}
+              div(id="wordoutField" align="center") #{wordOutput}
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

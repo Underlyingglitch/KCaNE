@@ -1,0 +1,108 @@
+doctype HTML
+html
+  head
+    title memory
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="http://www.bombmanual.com/web/img/module-icons/MemoryComponent.svg" width="200px")
+      h1 On The Subject of Memory
+      br
+      br
+      form(action="/memory" method="POST")
+        table(width="50%" align="center")
+          tr
+            th(height="50") Stage
+            th(height="50") Display
+            th(height="50") Pos.
+            th(height="50") Label
+          tr
+            td(height="50" align="center") 1
+            td(height="50" align="center")
+              input(type='submit', name="s1p1n1" value="1")
+              input(type='submit', name="s1p1n2" value="2")
+              input(type='submit', name="s1p1n3" value="3")
+              input(type='submit', name="s1p1n4" value="4")
+            td(height="50" align="center")
+              div(align="center") #{s1p2Text}
+              div(align="center")
+                each button in s1p2buttons
+                  input(type='submit', name="s1p2n" + button value= button)
+            td(height="50" align="center")
+              div(align="center") #{s1p3Text}
+              div(align="center")
+                each button in s1p3buttons
+                  input(type='submit', name="s1p3n" + button value= button)
+          tr
+            td(height="50" align="center") 2
+            td(height="50" align="center")
+              input(type='submit', name="s2p1n1" value="1")
+              input(type='submit', name="s2p1n2" value="2")
+              input(type='submit', name="s2p1n3" value="3")
+              input(type='submit', name="s2p1n4" value="4")
+            td(height="50" align="center")
+              div(align="center") #{s2p2Text}
+              div(align="center")
+                each button in s2p2buttons
+                  input(type='submit', name="s2p2n" + button value= button)
+            td(height="50" align="center")
+              div(align="center") #{s2p3Text}
+              div(align="center")
+                each button in s2p3buttons
+                  input(type='submit', name="s2p3n" + button value= button)
+          tr
+            td(height="50" align="center") 3
+            td(height="50" align="center")
+              input(type='submit', name="s3p1n1" value="1")
+              input(type='submit', name="s3p1n2" value="2")
+              input(type='submit', name="s3p1n3" value="3")
+              input(type='submit', name="s3p1n4" value="4")
+            td(height="50" align="center")
+              div(align="center") #{s3p2Text}
+              div(align="center")
+                each button in s3p2buttons
+                  input(type='submit', name="s3p2n" + button value= button)
+            td(height="50" align="center")
+              div(align="center") #{s3p3Text}
+              div(align="center")
+                each button in s3p3buttons
+                  input(type='submit', name="s3p3n" + button value= button)
+          tr 
+            td(height="50" align="center") 4
+            td(height="50" align="center")
+              input(type='submit', name="s4p1n1" value="1")
+              input(type='submit', name="s4p1n2" value="2")
+              input(type='submit', name="s4p1n3" value="3")
+              input(type='submit', name="s4p1n4" value="4")
+            td(height="50" align="center")
+              div(align="center") #{s4p2Text}
+              div(align="center")
+                each button in s4p2buttons
+                  input(type='submit', name="s4p2n" + button value= button)
+            td(height="50" align="center")
+              div(align="center") #{s4p3Text}
+              div(align="center")
+                each button in s4p3buttons
+                  input(type='submit', name="s4p3n" + button value= button)
+          tr 
+            td(height="50" align="center") 5
+            td(height="50" align="center")
+              input(type='submit', name="s5p1n1" value="1")
+              input(type='submit', name="s5p1n2" value="2")
+              input(type='submit', name="s5p1n3" value="3")
+              input(type='submit', name="s5p1n4" value="4")
+            td(height="50" align="center")
+              div(align="center") #{s5p2Text}
+              div(align="center")
+                each button in s5p2buttons
+                  input(type='submit', name="s5p2n" + button value= button)
+            td(height="50" align="center")
+              div(align="center") #{s5p3Text}
+              div(align="center")
+                each button in s5p3buttons
+                  input(type='submit', name="s5p3n" + button value= button)
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

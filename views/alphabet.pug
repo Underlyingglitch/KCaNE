@@ -1,0 +1,27 @@
+doctype HTML
+html
+  head
+    title alphabet
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="https://ktane.timwi.de/HTML/img/Component/Alphabet.svg" width="200px")
+      h1 On The Subject of Alphabet
+      br
+      br
+      form(action="/alphabet" method="POST")
+        table(width="50%")
+          tr
+            th(height="50")
+                div(align="center")
+                  input(type="text" name="input" value="" maxlength="4")
+                  input(type="submit" name="submit" value="")
+                  
+          tr
+            td(height="50" )
+              div(id="outField" align="center") #{title}
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

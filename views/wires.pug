@@ -1,0 +1,35 @@
+doctype HTML
+html
+  head
+    title wires
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="http://www.bombmanual.com/web/img/module-icons/WireComponent.svg" width="200px")
+      h1 On The Subject of Wires
+      br
+      br
+      table(width="50%")
+        tr
+          th(height="50")
+            form(action="/wires" method="POST")
+              div(id="currentColours" align="center")
+                input(type='submit', name="red" value="" class="colour-box colour-box-red")
+                input(type='submit', name="white" value="" class="colour-box colour-box-white")
+                input(type='submit', name="blue" value="" class="colour-box colour-box-blue")
+                input(type='submit', name="yellow" value="" class="colour-box colour-box-yellow")
+                input(type='submit', name="black" value="" class="colour-box colour-box-black")
+                input(type='submit', name="delete" value="X" class="colour-box colour-box-white")
+        tr
+          td(height="50")
+            div(id="currentColours" align="center")
+              each colour in colours
+                div(class="colour-box colour-box-" + colour)
+        tr
+          td(height="50" )
+            div(id="outField" align="center") #{title}
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

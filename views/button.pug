@@ -1,0 +1,47 @@
+doctype HTML
+html
+  head
+    title button
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="http://www.bombmanual.com/web/img/module-icons/ButtonComponent.svg" width="200px")
+      h1 On The Subject of The Button
+      br
+      br
+      form(action="/button" method="POST")
+        table(width="50%")
+          tr 
+            td #{buttoninfo1}
+            th(height="50")
+                div(id="buttonColour" align="center")
+                  input(type='submit', name="red" value="" class="colour-box colour-box-red")
+                  input(type='submit', name="white" value="" class="colour-box colour-box-white")
+                  input(type='submit', name="blue" value="" class="colour-box colour-box-blue")
+                  input(type='submit', name="yellow" value="" class="colour-box colour-box-yellow")
+                  input(type='submit', name="black" value="" class="colour-box colour-box-black")
+          tr
+            td #{buttoninfo2}
+            td(height="50")
+                div(id="buttonWord" align="center")
+                  input(type='submit', name="Abort" value="Abort" class="word-box")
+                  input(type='submit', name="Detonate" value="Detonate" class="word-box")
+                  input(type='submit', name="Hold" value="Hold" class="word-box")
+                  input(type='submit', name="Press" value="Press" class="word-box")
+          tr
+            td #{buttoninfo3}
+            td(height="50" )
+                div(id="stripColour" align="center")
+                  input(type='submit', name="stripRed" value="" class="colour-box colour-box-red")
+                  input(type='submit', name="stripWhite" value="" class="colour-box colour-box-white")
+                  input(type='submit', name="stripBlue" value="" class="colour-box colour-box-blue")
+                  input(type='submit', name="stripYellow" value="" class="colour-box colour-box-yellow")  
+          tr
+            td
+            td(height="50" )    
+                div(id="output" align="center") #{title} 
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

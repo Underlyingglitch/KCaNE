@@ -1,0 +1,306 @@
+doctype html
+html
+  head
+    title KCaNE
+  body
+      div(align="center")
+        h1= title
+        form(action='/' ,method='POST')
+          table(width="300px" border="2")
+            tr
+              th AA Batteries
+              td
+                div(align="center")
+                  input(type="number" name="aabatteries" value="0")
+            tr
+              th D Batteries
+              td
+                div(align="center")
+                  input(type="number" name="dbatteries" value="0")
+            tr
+              th Serial #
+              td
+                div(align="center")
+                  input(type="text" name="serialNo" value="000000")
+            tr
+              th Ports
+              td
+                  ul
+                    li DVI-D
+                      input(type="number" name="port_dvi" id="port_dvi" value="0")
+                    li Parallel
+                      input(type="number" name="port_parallel" id="port_parallel" value="0")
+                    li PS/2
+                      input(type="number" name="port_ps2" id="port_ps2" value="0")
+                    li RJ-45
+                      input(type="number" name="port_rj45" id="port_rj45" value="0")
+                    li serial
+                      input(type="number" name="port_serial" id="port_serial" value="0")
+                    li Stereo RCA
+                      input(type="number" name="port_rca" id="port_rca" value="0")
+            tr
+              th Indicators
+              td
+                  ul
+                    li SND
+                      input(type="checkbox" name="snd" id="snd")
+                      label(for="snd") unlit
+                      input(type="checkbox" name="sndlit" id="snd_lit")
+                      label(for="snd-lit") lit
+                    li CLR
+                      input(type="checkbox" name="clr" id="clr")
+                      label(for="clr") unlit
+                      input(type="checkbox" name="clrlit" id="clr_lit")
+                      label(for="clr_lit") lit
+                    li CAR
+                      input(type="checkbox" name="car" id="car")
+                      label(for="car") unlit
+                      input(type="checkbox" name="carlit" id="car_lit")
+                      label(for="car_lit") lit
+                    li IND
+                      input(type="checkbox" name="ind" id="ind")
+                      label(for="ind") unlit
+                      input(type="checkbox" name="indlit" id="ind_lit")
+                      label(for="ind_lit") lit
+                    li FRQ
+                      input(type="checkbox" name="frq" id="frq")
+                      label(for="frq") unlit
+                      input(type="checkbox" name="frqlit" id="frq_lit")
+                      label(for="frq_lit") lit
+                    li SIG
+                      input(type="checkbox" name="sig" id="sig")
+                      label(for="sig") unlit
+                      input(type="checkbox" name="siglit" id="sig_lit")
+                      label(for="sig_lit") lit
+                    li NSA
+                      input(type="checkbox" name="nsa" id="nsa")
+                      label(for="nsa") unlit
+                      input(type="checkbox" name="nsalit" id="nsa_lit")
+                      label(for="nsa_lit") lit
+                    li MSA
+                      input(type="checkbox" name="msa" id="msa")
+                      label(for="msa") unlit
+                      input(type="checkbox" name="msalit" id="msa_lit")
+                      label(for="msa_lit") lit
+                    li TRN
+                      input(type="checkbox" name="trn" id="trn")
+                      label(for="trn") unlit
+                      input(type="checkbox" name="trnlit" id="trn_lit")
+                      label(for="trn_lit") lit
+                    li BOB
+                      input(type="checkbox" name="bob" id="bob")
+                      label(for="bob") unlit
+                      input(type="checkbox" name="boblit" id="bob_lit")
+                      label(for="bob_lit") lit
+                    li FRK
+                      input(type="checkbox" name="frk" id="car")
+                      label(for="frk") unlit
+                      input(type="checkbox" name="frklit" id="frk_lit")
+                      label(for="frk_lit") lit
+          br
+          button(type='submit', name="pizzatime") enter
+          br
+          br
+          table
+            tr
+              td
+                table(width="100%" display="block")
+                  tr
+                   td
+                    div(align="center")
+                      h2 Wires
+                  tr
+                    td
+                      div(align="center")
+                        a(href="wires")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/WireComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Button
+                  tr
+                    td
+                      div(align="center")
+                        a(href="button")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/ButtonComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Keypads
+                  tr
+                    td
+                      div(align="center")
+                        a(href="keypads")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/KeypadComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Simon Says
+                  tr
+                    td
+                      div(align="center")
+                        a(href="simon_says")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/SimonComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Who's On First
+                  tr
+                    td
+                      div(align="center")
+                        a(href="whos_on_first")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/WhosOnFirstComponent.svg")
+            tr
+              td
+                table(width="300px")
+                  tr
+                   td
+                    div(align="center")
+                      h2 Memory
+                  tr
+                    td
+                      div(align="center")
+                        a(href="memory")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/MemoryComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Morse Code
+                  tr
+                    td
+                      div(align="center")
+                        a(href="morse_code")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/MorseCodeComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Complicated Wires
+                  tr
+                    td
+                      div(align="center")
+                        a(href="complicated_wires")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/VennWireComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Wire Sequence
+                  tr
+                    td
+                      div(align="center")
+                        a(href="wire_sequence")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/WireSequenceComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Mazes
+                  tr
+                    td
+                      div(align="center")
+                        a(href="maze")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/MazeComponent.svg")
+            tr
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Password
+                  tr
+                    td
+                      div(align="center")
+                        a(href="password")
+                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/PasswordComponent.svg")
+              td
+                table(width="300px")
+                  tr
+                   td
+                    div(align="center")
+                      h2 Adjacent Letters
+                  tr
+                    td
+                      div(align="center")
+                        a(href="adjacent_letters")
+                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Adjacent%20Letters.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Adventure Games
+                  tr
+                    td
+                      div(align="center")
+                        a(href="adventure_games")
+                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Adventure%20Game.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 3D Maze
+                  tr
+                    td
+                      div(align="center")
+                        a(href="3d_maze")
+                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/3D%20Maze.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Alphabet
+                  tr
+                    td
+                      div(align="center")
+                        a(href="alphabet")
+                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Alphabet.svg")
+            tr
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Binary LEDs
+                  tr
+                    td
+                      div(align="center")
+                        a(href="binary_leds")
+                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Binary%20LEDs.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Cheap Checkout
+                  tr
+                    td
+                      div(align="center")
+                        a(href="cheap_checkout")
+                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Cheap%20Checkout.svg")
+              td
+                table(width="300px")
+                  tr
+                    td
+                      div(align="center")
+                        h2 Anagrams
+                  tr
+                    td
+                      div(align="center")
+                        a(href="anagrams")
+                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Anagrams.svg")

@@ -1,0 +1,59 @@
+doctype HTML
+html
+  head
+    title wire sequence
+    style
+      include style.css
+  body      
+    div(align="center")   
+      img(src="http://www.bombmanual.com/web/img/module-icons/WireSequenceComponent.svg" width="200px")
+      h1 On The Subject of Wire Sequence
+      br
+      br
+      form(action="/wire_sequence" method="POST")
+        table(width="50%")
+          tr
+            td(height="50")
+              div(id="" align="center")
+                ul(style="list-style-type:none")
+                  li
+                    input(type="checkbox" name="red" id="red")
+                    label(for="red") Red
+                    input(type="checkbox" name="a" id="a")
+                    label(for="a") A
+                  li
+                    input(type="checkbox" name="blue" id="blue")
+                    label(for="blue") Blue
+                    input(type="checkbox" name="b" id="b")
+                    label(for="b") B
+                  li
+                    input(type="checkbox" name="black" id="black")
+                    label(for="black") Black
+                    input(type="checkbox" name="c" id="c")
+                    label(for="c") C
+                  li
+                    button(type='submit', name="enter" value="") Enter
+                    button(type='submit', name="reset" value="") Reset
+                    
+          tr
+            td(height="50" colspan="2")
+              div(id="currentColours" align="center")
+                each colour in redList
+                  div(class="colour-box colour-box-red")
+          tr
+            td(height="50" colspan="2")
+              div(id="currentColours" align="center")
+                each colour in blueList
+                  div(class="colour-box colour-box-blue")
+          tr
+            td(height="50" colspan="2")
+              div(id="currentColours" align="center")
+                each colour in blackList
+                  div(class="colour-box colour-box-black")
+          tr
+            td(height="50" )
+              div(id="outField" align="center") #{title}
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

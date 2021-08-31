@@ -1,0 +1,36 @@
+doctype HTML
+html
+  head
+    title SimonSays
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="http://www.bombmanual.com/web/img/module-icons/SimonComponent.svg" width="200px")
+      h1 On The Subject of Simon Says
+      br
+      br
+      form(action="/simon_says" method="POST")
+        table(width="50%")
+          tr
+            th(height="50")
+              div(id="chooseStrikes" align="center")
+                input(type="number" name="strikes" id="strikes" value=""+ box)
+          tr
+            td(height="50")  
+              div(id="chooseColour" align="center")
+                input(type='submit', name="red" value="" class="colour-box colour-box-red")
+                input(type='submit', name="green" value="" class="colour-box colour-box-green")
+                input(type='submit', name="blue" value="" class="colour-box colour-box-blue")
+                input(type='submit', name="yellow" value="" class="colour-box colour-box-yellow")
+                  
+
+          tr
+            td(height="50")
+              div(id="answerColour" align="center")
+                each colour in colours
+                  div(class="colour-box colour-box-" + colour)
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

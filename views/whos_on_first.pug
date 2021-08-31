@@ -1,0 +1,114 @@
+doctype HTML
+html
+  head
+    title Who's on First
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="http://www.bombmanual.com/web/img/module-icons/WhosOnFirstComponent.svg" width="200px")
+      h1 On The Subject of Who's on First
+      br
+      br
+      table(width="50%")
+        tr
+          th(height="50")
+            form(action="/whos_on_first" method="POST")
+              div(id="chooseWords" align="center")
+                input(type='submit', name="yes" value="YES" class="word-box")
+                input(type='submit', name="first" value="FIRST" class="word-box")
+                input(type='submit', name="display" value="DISPLAY" class="word-box")
+                input(type='submit', name="okay" value="OKAY" class="word-box")
+                input(type='submit', name="says" value="SAYS" class="word-box")
+                input(type='submit', name="nothing" value="NOTHING"  class="word-box")
+                input(type='submit', name="empty" value=""  class="word-box")
+        tr
+          th(height="50")
+            form(action="/whos_on_first" method="POST")
+              div(id="chooseWords" align="center")
+                input(type='submit', name="blank" value="BLANK" class="word-box")
+                input(type='submit', name="no" value="NO" class="word-box")
+                input(type='submit', name="led" value="LED" class="word-box")
+                input(type='submit', name="lead" value="LEAD" class="word-box")
+                input(type='submit', name="read" value="READ" class="word-box")
+                input(type='submit', name="red" value="RED"  class="word-box")
+                input(type='submit', name="reed" value="REED"  class="word-box")
+        tr
+          th(height="50")
+            form(action="/whos_on_first" method="POST")
+              div(id="chooseWords" align="center")
+                input(type='submit', name="leed" value="LEED" class="word-box")
+                input(type='submit', name="hold_on" value="HOLD ON" class="word-box")
+                input(type='submit', name="you" value="YOU" class="word-box")
+                input(type='submit', name="you_are" value="YOU ARE" class="word-box")
+                input(type='submit', name="your" value="YOUR" class="word-box")
+                input(type='submit', name="you_re" value="YOU'RE"  class="word-box")
+                input(type='submit', name="ur" value="UR"  class="word-box")
+        tr
+          th(height="50")
+            form(action="/whos_on_first" method="POST")
+              div(id="chooseWords" align="center")
+                input(type='submit', name="there" value="THERE" class="word-box")
+                input(type='submit', name="they_re" value="THEY'RE" class="word-box")
+                input(type='submit', name="their" value="THEIR" class="word-box")
+                input(type='submit', name="they_are" value="THEY ARE" class="word-box")
+                input(type='submit', name="see" value="SEE" class="word-box")
+                input(type='submit', name="c" value="C"  class="word-box")
+                input(type='submit', name="cee" value="CEE"  class="word-box")
+      tr
+        td(height="50px" border="2")
+          div(id="outField" align="center") #{title}
+      br 
+      br
+      tr
+        th(height="50")
+          form(action="/whos_on_first" method="POST")
+            div(id="chooseWords" align="center")
+              input(type='submit', name="second_ready" value="READY" class="word-box")
+              input(type='submit', name="second_first" value="FIRST" class="word-box")
+              input(type='submit', name="second_no" value="NO" class="word-box")
+              input(type='submit', name="second_blank" value="BLANK" class="word-box")
+              input(type='submit', name="second_nothing" value="NOTHING" class="word-box")
+              input(type='submit', name="second_yes" value="YES"  class="word-box")
+              input(type='submit', name="second_what" value="WHAT"  class="word-box")
+      tr
+        th(height="50")
+          form(action="/whos_on_first" method="POST")
+            div(id="chooseWords" align="center")
+              input(type='submit', name="second_uhhh" value="UHHH" class="word-box")
+              input(type='submit', name="second_left" value="LEFT" class="word-box")
+              input(type='submit', name="second_right" value="RIGHT" class="word-box")
+              input(type='submit', name="second_middle" value="MIDDLE" class="word-box")
+              input(type='submit', name="second_okay" value="OKAY"  class="word-box")
+              input(type='submit', name="second_okay" value="OKAY" class="word-box")
+              input(type='submit', name="second_press" value="PRESS"  class="word-box")
+              
+      tr
+        th(height="50")
+          form(action="/whos_on_first" method="POST")
+            div(id="chooseWords" align="center")
+              input(type='submit', name="second_you" value="YOU" class="word-box")
+              input(type='submit', name="second_you_are" value="YOU ARE" class="word-box")
+              input(type='submit', name="second_your" value="YOUR" class="word-box")
+              input(type='submit', name="second_you_re" value="YOU'RE" class="word-box")
+              input(type='submit', name="second_ur" value="UR" class="word-box")
+              input(type='submit', name="second_u" value="U"  class="word-box")
+              input(type='submit', name="second_uh_huh" value="UH HUH"  class="word-box")
+      tr
+        th(height="50")
+          form(action="/whos_on_first" method="POST")
+            div(id="chooseWords" align="center")
+              input(type='submit', name="second_uh_uh" value="UH UH" class="word-box")
+              input(type='submit', name="second_whatq" value="WHAT?" class="word-box")
+              input(type='submit', name="second_done" value="DONE" class="word-box")
+              input(type='submit', name="second_next" value="NEXT" class="word-box")
+              input(type='submit', name="second_hold" value="HOLD" class="word-box")
+              input(type='submit', name="second_sure" value="SURE"  class="word-box")
+              input(type='submit', name="second_like" value="LIKE"  class="word-box")
+      tr
+        td(height="50" )
+          div(id="outField" align="center") #{output}
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

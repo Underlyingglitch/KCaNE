@@ -1,0 +1,31 @@
+doctype HTML
+html
+  head
+    title binary leds
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="https://ktane.timwi.de/HTML/img/Component/Binary%20LEDs.svg" width="200px")
+      h1 On The Subject of Binary LEDs
+      br
+      br
+      p Press I when led is on, press O when led is off
+      table(width="50%")
+        tr
+          th(height="50")
+            form(action="/binary_leds" method="POST")
+              input(type="text" name="input1" value="")
+              br
+              input(type="text" name="input2" value="")
+              br
+              input(type="text" name="input3" value="")
+              br
+              input(type="submit" name="submit" value="Submit")
+        tr
+          td(height="50" )
+            div(id="outField" align="center") #{title}
+      br
+      br
+      a(href="http://localhost:3000")
+        img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")
