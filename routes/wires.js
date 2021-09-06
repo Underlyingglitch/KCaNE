@@ -16,6 +16,7 @@ module.exports = function(app) {
                               sndlit: [ 'on', 'on' ]
                             }
     }
+    //hello
     req.session.wires = [];
     res.render('wires', {
       title: "add a wire",
