@@ -4,6 +4,9 @@ html
     title KCaNE
     script(type='text/javascript' src='scripts/jquery.js')
     script(type='text/javascript' src='scripts/search.js')
+    link(rel="stylesheet" href="css/bootstrap.min.css")
+    style
+      include style.css
   body
       div(align="center")
         h1=title
@@ -104,206 +107,204 @@ html
           button(type='submit', name="reset") reset
           br
           br
-          table
-            tr
-              td
-                table(width="100%" display="block")
-                  tr
-                   td
+          input(type="text" id="search" placeholder="Filter modules")
+          p(id="test")
+          div(class="row" style="width: 90%")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                  div(align="center")
+                    h2 Wires
+                tr
+                  td
                     div(align="center")
-                      h2 Wires
-                  tr
-                    td
-                      div(align="center")
-                        a(href="wires")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/WireComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Button
-                  tr
-                    td
-                      div(align="center")
-                        a(href="button")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/ButtonComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Keypads
-                  tr
-                    td
-                      div(align="center")
-                        a(href="keypads")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/KeypadComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Simon Says
-                  tr
-                    td
-                      div(align="center")
-                        a(href="simon_says")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/SimonComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Who's On First
-                  tr
-                    td
-                      div(align="center")
-                        a(href="whos_on_first")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/WhosOnFirstComponent.svg")
-            tr
-              td
-                table(width="300px")
-                  tr
-                   td
+                      a( href="wires")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/WireComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
                     div(align="center")
-                      h2 Memory
-                  tr
-                    td
-                      div(align="center")
-                        a(href="memory")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/MemoryComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Morse Code
-                  tr
-                    td
-                      div(align="center")
-                        a(href="morse_code")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/MorseCodeComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Complicated Wires
-                  tr
-                    td
-                      div(align="center")
-                        a(href="complicated_wires")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/VennWireComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Wire Sequence
-                  tr
-                    td
-                      div(align="center")
-                        a(href="wire_sequence")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/WireSequenceComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Mazes
-                  tr
-                    td
-                      div(align="center")
-                        a(href="maze")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/MazeComponent.svg")
-            tr
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Password
-                  tr
-                    td
-                      div(align="center")
-                        a(href="password")
-                          img(alt="wires" src="http://www.bombmanual.com/web/img/module-icons/PasswordComponent.svg")
-              td
-                table(width="300px")
-                  tr
-                   td
+                      h2 Button
+                tr
+                  td
                     div(align="center")
-                      h2 Adjacent Letters
-                  tr
-                    td
-                      div(align="center")
-                        a(href="adjacent_letters")
-                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Adjacent%20Letters.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Adventure Games
-                  tr
-                    td
-                      div(align="center")
-                        a(href="adventure_games")
-                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Adventure%20Game.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 3D Maze
-                  tr
-                    td
-                      div(align="center")
-                        a(href="3d_maze")
-                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/3D%20Maze.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Alphabet
-                  tr
-                    td
-                      div(align="center")
-                        a(href="alphabet")
-                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Alphabet.svg")
-            tr
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Binary LEDs
-                  tr
-                    td
-                      div(align="center")
-                        a(href="binary_leds")
-                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Binary%20LEDs.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Cheap Checkout
-                  tr
-                    td
-                      div(align="center")
-                        a(href="cheap_checkout")
-                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Cheap%20Checkout.svg")
-              td
-                table(width="300px")
-                  tr
-                    td
-                      div(align="center")
-                        h2 Anagrams
-                  tr
-                    td
-                      div(align="center")
-                        a(href="anagrams")
-                          img(alt="wires" src="https://ktane.timwi.de/HTML/img/Component/Anagrams.svg")
+                      a( href="button")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/ButtonComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Keypads
+                tr
+                  td
+                    div(align="center")
+                      a( href="keypads")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/KeypadComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Simon Says
+                tr
+                  td
+                    div(align="center")
+                      a( href="simon_says")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/SimonComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Who's On First
+                tr
+                  td
+                    div(align="center")
+                      a( href="whos_on_first")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/WhosOnFirstComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                  div(align="center")
+                    h2 Memory
+                tr
+                  td
+                    div(align="center")
+                      a( href="memory")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/MemoryComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Morse Code
+                tr
+                  td
+                    div(align="center")
+                      a( href="morse_code")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/MorseCodeComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Complicated Wires
+                tr
+                  td
+                    div(align="center")
+                      a( href="complicated_wires")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/VennWireComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Wire Sequence
+                tr
+                  td
+                    div(align="center")
+                      a( href="wire_sequence")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/WireSequenceComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Mazes
+                tr
+                  td
+                    div(align="center")
+                      a( href="maze")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/MazeComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Password
+                tr
+                  td
+                    div(align="center")
+                      a( href="password")
+                        img(alt="module_svg" src="http://www.bombmanual.com/web/img/module-icons/PasswordComponent.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                  div(align="center")
+                    h2 Adjacent Letters
+                tr
+                  td
+                    div(align="center")
+                      a( href="adjacent_letters")
+                        img(alt="module_svg" src="https://ktane.timwi.de/HTML/img/Component/Adjacent%20Letters.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Adventure Games
+                tr
+                  td
+                    div(align="center")
+                      a( href="adventure_games")
+                        img(alt="module_svg" src="https://ktane.timwi.de/HTML/img/Component/Adventure%20Game.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 3D Maze
+                tr
+                  td
+                    div(align="center")
+                      a( href="3d_maze")
+                        img(alt="module_svg" src="https://ktane.timwi.de/HTML/img/Component/3D%20Maze.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Alphabet
+                tr
+                  td
+                    div(align="center")
+                      a( href="alphabet")
+                        img(alt="module_svg" src="https://ktane.timwi.de/HTML/img/Component/Alphabet.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Binary LEDs
+                tr
+                  td
+                    div(align="center")
+                      a( href="binary_leds")
+                        img(alt="module_svg" src="https://ktane.timwi.de/HTML/img/Component/Binary%20LEDs.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Cheap Checkout
+                tr
+                  td
+                    div(align="center")
+                      a( href="cheap_checkout")
+                        img(alt="module_svg" src="https://ktane.timwi.de/HTML/img/Component/Cheap%20Checkout.svg")
+            div(class="col-md-2")
+              table(width="300px")
+                tr
+                  td
+                    div(align="center")
+                      h2 Anagrams
+                tr
+                  td
+                    div(align="center")
+                      a( href="anagrams")
+                        img(alt="module_svg" src="https://ktane.timwi.de/HTML/img/Component/Anagrams.svg")
