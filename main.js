@@ -23,36 +23,35 @@ app.use(session({secret: "Shh, its a secret!"}));
 
 // Load index.pug
 app.get('/', function (req, res) {
-  res.render('index', {
-    title: "default",
-  });
+  if (typeof req.session.bominfo == 'undefined') {
+    res.render('index', {
+      title: "default",
+    });
+  } else {
+    res.render('index', {
+      title: req.session.bominfo.serialNo,
+    });
+  }
+  
 });
 
 
 
 app.post('/', function (req, res) {
-  console.log(req.body);
-  if (req.body.pizzatime == "") {
-    console.log("pizza");
+  if (req.body.reset == "") {
+    req.session.destroy();
+  } else if (req.body.submit == "") {
+    req.session.bominfo = req.body;
   }
-  else if (req.body.pastatime == "") {
-    console.log("pasta");
+  if (typeof req.session == 'undefined') {
+    res.render('index', {
+      title: "default",
+    });
+  } else {
+    res.render('index', {
+      title: req.session.bominfo.serialNo,
+    });
   }
-  req.session.bominfo = req.body;
-  res.render('index', {
-    title: req.session.bominfo.serialNo
-  });
-});
-
-
-app.get('/test', function (req, res) {
-  if (req.session.test) {
-    res.send(req.session);
-  }
-  else {
-    res.send("fuck you");
-  }
-
 });
 
 
