@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const session = require('express-session');
-const fs = require('fs');
+const rootRouter = require('./routes');
 
 const upload = multer();
 const app = express();
@@ -55,10 +55,8 @@ app.get('/module/:moduleId', (req, res) => {
   res.send(req.params.moduleId);
 });
 
-fs.readdirSync(path.join(__dirname, '/routes')).forEach((file) => {
-  const name = file.substr(0, file.indexOf('.'));
-  require(`./routes/${name}`)(app);
-});
+// require the routes here
+app.use('/', rootRouter);
 
 // Start Server
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
