@@ -29,21 +29,21 @@ module.exports = function (app) {
       req.session.wires = [];
     }
 
-    if (req.body.delete == 'X') {
+    if (req.body.delete === 'X') {
       if (req.session.wires.length > 0) {
         req.session.wires.length -= 1;
       }
     }
     if (req.session.wires.length < 6) {
-      if (req.body.red == '') {
+      if (req.body.red === '') {
         req.session.wires.push('red');
-      } else if (req.body.white == '') {
+      } else if (req.body.white === '') {
         req.session.wires.push('white');
-      } else if (req.body.blue == '') {
+      } else if (req.body.blue === '') {
         req.session.wires.push('blue');
-      } else if (req.body.yellow == '') {
+      } else if (req.body.yellow === '') {
         req.session.wires.push('yellow');
-      } else if (req.body.black == '') {
+      } else if (req.body.black === '') {
         req.session.wires.push('black');
       }
     }
@@ -54,58 +54,59 @@ module.exports = function (app) {
         name,
       }))
       .reduce((a, b) => {
-        a[b.name] = (a[b.name] || 0) + b.count;
-        return a;
+        const d = a;
+        d[b.name] = (a[b.name] || 0) + b.count;
+        return d;
       }, {});
     const duplicates = Object.keys(uniq).filter((a) => uniq[a] > 1);
     let outcome = 'enter wires';
-    const str = '.1abc2.5efg3mno';
+    // const str = '.1abc2.5efg3mno';
     const digits = req.session.bominfo.serialNo.replace(/\D/g, '');
     const lastDigit = digits[digits.length - 1];
 
     function isEven(value) {
-      if (value % 2 == 0) return true;
+      if (value % 2 === 0) return true;
       return false;
     }
 
-    if (req.session.wires.length == 3) {
-      if (req.session.wires.includes('red') == false) {
+    if (req.session.wires.length === 3) {
+      if (req.session.wires.includes('red') === false) {
         outcome = 'cut the second wire';
-      } else if (lastWire == 'white') {
+      } else if (lastWire === 'white') {
         outcome = 'cut the last wire';
-      } else if (duplicates.includes('blue') == true) {
+      } else if (duplicates.includes('blue') === true) {
         outcome = 'cut the last blue wire';
       } else {
         outcome = 'cut the last wire';
       }
-    } else if (req.session.wires.length == 4) {
-      if (duplicates.includes('red') == true && isEven(lastDigit) == false) {
+    } else if (req.session.wires.length === 4) {
+      if (duplicates.includes('red') === true && isEven(lastDigit) === false) {
         outcome = 'cut the last red wire';
-      } else if (req.session.wires.includes('red') == false && lastWire == 'yellow') {
+      } else if (req.session.wires.includes('red') === false && lastWire === 'yellow') {
         outcome = 'cut the first wire';
-      } else if (req.session.wires.includes('blue') == true && duplicates.includes('blue') == false) {
+      } else if (req.session.wires.includes('blue') === true && duplicates.includes('blue') === false) {
         outcome = 'cut the first wire';
-      } else if (duplicates.includes('yellow') == true) {
+      } else if (duplicates.includes('yellow') === true) {
         outcome = 'cut the last wire';
       } else {
         outcome = 'cut the second wire';
       }
-    } else if (req.session.wires.length == 5) {
-      if (lastWire == 'black' && isEven(lastDigit) == false) {
+    } else if (req.session.wires.length === 5) {
+      if (lastWire === 'black' && isEven(lastDigit) === false) {
         outcome = 'cut the fourth wire';
-      } else if (req.session.wires.includes('red') == true && duplicates.includes('red') == false && duplicates.includes('yellow') == true) {
+      } else if (req.session.wires.includes('red') === true && duplicates.includes('red') === false && duplicates.includes('yellow') === true) {
         outcome = 'cut the first wire';
-      } else if (req.session.wires.includes('black') == false) {
+      } else if (req.session.wires.includes('black') === false) {
         outcome = 'cut the second wire';
       } else {
         outcome = 'cut the first wire';
       }
-    } else if (req.session.wires.length == 6) {
-      if (req.session.wires.includes('yellow') == false && isEven(lastDigit) == false) {
+    } else if (req.session.wires.length === 6) {
+      if (req.session.wires.includes('yellow') === false && isEven(lastDigit) === false) {
         outcome = 'cut the third wire';
-      } else if (req.session.wires.includes('yellow') == true && duplicates.includes('yellow') == false && duplicates.includes('white')) {
+      } else if (req.session.wires.includes('yellow') === true && duplicates.includes('yellow') === false && duplicates.includes('white')) {
         outcome = 'cut the fourth wire';
-      } else if (req.session.wires.includes('red') == false) {
+      } else if (req.session.wires.includes('red') === false) {
         outcome = 'cut the last wire';
       } else {
         outcome = 'cut the fourth wire';
