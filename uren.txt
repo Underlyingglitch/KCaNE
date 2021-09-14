@@ -1,5 +1,5 @@
 Rick:
-1
+14-9-2021 [16:58-17:52] {Code cleanup};
 
 Menno:
 14-9-2021[15:30-..] {Code editor opnieuw klaar gezet. Regels over syntax. Syntax gefixt van alle modules tot dit punt. Wires module getest.}; 
