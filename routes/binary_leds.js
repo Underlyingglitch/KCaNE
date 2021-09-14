@@ -1,14 +1,13 @@
-module.exports = function(app) {
-  app.get('/binary_leds', function (req, res){
+module.exports = function (app) {
+  app.get('/binary_leds', (req, res) => {
     res.render('binary_leds', {
-      title: "test",
+      title: 'test',
     });
   });
 
-  app.post('/binary_leds', function (req, res) {
-
-    if (req.body.submit == "Submit") {
-      console.log("hello");
+  app.post('/binary_leds', (req, res) => {
+    if (req.body.submit == 'Submit') {
+      console.log('hello');
     }
   });
-}
+};

@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const session = require('express-session');
-var fs = require('fs');
+const fs = require('fs');
 
 const upload = multer();
 const app = express();
@@ -19,33 +19,30 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(upload.array());
 app.use(express.static('public'));
 
-app.use(session({secret: "Shh, its a secret!"}));
+app.use(session({ secret: 'Shh, its a secret!' }));
 
 // Load index.pug
-app.get('/', function (req, res) {
-  if (typeof req.session.bominfo == 'undefined') {
+app.get('/', (req, res) => {
+  if (typeof req.session.bominfo === 'undefined') {
     res.render('index', {
-      title: "default",
+      title: 'default',
     });
   } else {
     res.render('index', {
       title: req.session.bominfo.serialNo,
     });
   }
-  
 });
 
-
-
-app.post('/', function (req, res) {
-  if (req.body.reset == "") {
+app.post('/', (req, res) => {
+  if (req.body.reset === '') {
     req.session.destroy();
-  } else if (req.body.submit == "") {
+  } else if (req.body.submit === '') {
     req.session.bominfo = req.body;
   }
-  if (typeof req.session == 'undefined') {
+  if (typeof req.session === 'undefined') {
     res.render('index', {
-      title: "default",
+      title: 'default',
     });
   } else {
     res.render('index', {
@@ -54,14 +51,13 @@ app.post('/', function (req, res) {
   }
 });
 
-
-app.get('/module/:moduleId', function (req, res) {
-  res.send(req.params["moduleId"])
+app.get('/module/:moduleId', (req, res) => {
+  res.send(req.params.moduleId);
 });
 
-fs.readdirSync(path.join(__dirname, '/routes')).forEach(function(file) {
-  var name = file.substr(0, file.indexOf('.'));
-  require('./routes/' + name)(app);
+fs.readdirSync(path.join(__dirname, '/routes')).forEach((file) => {
+  const name = file.substr(0, file.indexOf('.'));
+  require(`./routes/${name}`)(app);
 });
 
 // Start Server
