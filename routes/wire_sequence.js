@@ -17,318 +17,315 @@ module.exports = function (app) {
     }
     res.render('wire_sequence', {
       title: '',
-      redList: redList1,
-      blueList: blueList1,
-      blackList: blackList1,
     });
   });
 
-  var redList1 = [];
-  var blueList1 = [];
-  var blackList1 = [];
-
   app.post('/wire_sequence', (req, res) => {
-    if (req.body.reset == '') {
+    let redList1 = [];
+    let blueList1 = [];
+    let blackList1 = [];
+
+    if (req.body.reset === '') {
       redList1 = [];
       blueList1 = [];
       blackList1 = [];
     }
     let outcome = '';
 
-    if (req.body.red == 'on') {
-      if (req.body.a == 'on') {
+    if (req.body.red === 'on') {
+      if (req.body.a === 'on') {
         redList1.push('a');
-      } else if (req.body.b == 'on') {
+      } else if (req.body.b === 'on') {
         redList1.push('b');
-      } else if (req.body.c == 'on') {
+      } else if (req.body.c === 'on') {
         redList1.push('c');
       }
-      if (redList1.length == 1) {
-        if (redList1[0] == 'a') {
+      if (redList1.length === 1) {
+        if (redList1[0] === 'a') {
           outcome = 'do not cut';
         }
-        if (redList1[0] == 'b') {
+        if (redList1[0] === 'b') {
           outcome = 'do not cut';
         }
-        if (redList1[0] == 'c') {
+        if (redList1[0] === 'c') {
           outcome = 'cut';
         }
-      } else if (redList1.length == 2) {
-        if (redList1[1] == 'a') {
+      } else if (redList1.length === 2) {
+        if (redList1[1] === 'a') {
           outcome = 'do not cut';
         }
-        if (redList1[1] == 'b') {
+        if (redList1[1] === 'b') {
           outcome = 'cut';
         }
-        if (redList1[1] == 'c') {
+        if (redList1[1] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (redList1.length == 3) {
-        if (redList1[2] == 'a') {
+      } else if (redList1.length === 3) {
+        if (redList1[2] === 'a') {
           outcome = 'cut';
         }
-        if (redList1[2] == 'b') {
+        if (redList1[2] === 'b') {
           outcome = 'do not cut';
         }
-        if (redList1[2] == 'c') {
+        if (redList1[2] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (redList1.length == 4) {
-        if (redList1[3] == 'a') {
+      } else if (redList1.length === 4) {
+        if (redList1[3] === 'a') {
           outcome = 'cut';
         }
-        if (redList1[3] == 'b') {
+        if (redList1[3] === 'b') {
           outcome = 'do not cut';
         }
-        if (redList1[3] == 'c') {
+        if (redList1[3] === 'c') {
           outcome = 'cut';
         }
-      } else if (redList1.length == 5) {
-        if (redList1[4] == 'a') {
+      } else if (redList1.length === 5) {
+        if (redList1[4] === 'a') {
           outcome = 'do not cut';
         }
-        if (redList1[4] == 'b') {
+        if (redList1[4] === 'b') {
           outcome = 'cut';
         }
-        if (redList1[4] == 'c') {
+        if (redList1[4] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (redList1.length == 6) {
-        if (redList1[5] == 'a') {
+      } else if (redList1.length === 6) {
+        if (redList1[5] === 'a') {
           outcome = 'cut';
         }
-        if (redList1[5] == 'b') {
+        if (redList1[5] === 'b') {
           outcome = 'do not cut';
         }
-        if (redList1[5] == 'c') {
+        if (redList1[5] === 'c') {
           outcome = 'cut';
         }
-      } else if (redList1.length == 7) {
-        if (redList1[6] == 'a') {
+      } else if (redList1.length === 7) {
+        if (redList1[6] === 'a') {
           outcome = 'cut';
         }
-        if (redList1[6] == 'b') {
+        if (redList1[6] === 'b') {
           outcome = 'cut';
         }
-        if (redList1[6] == 'c') {
+        if (redList1[6] === 'c') {
           outcome = 'cut';
         }
-      } else if (redList1.length == 8) {
-        if (redList1[7] == 'a') {
+      } else if (redList1.length === 8) {
+        if (redList1[7] === 'a') {
           outcome = 'cut';
         }
-        if (redList1[7] == 'b') {
+        if (redList1[7] === 'b') {
           outcome = 'cut';
         }
-        if (redList1[7] == 'c') {
+        if (redList1[7] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (redList1.length == 9) {
-        if (redList1[8] == 'a') {
+      } else if (redList1.length === 9) {
+        if (redList1[8] === 'a') {
           outcome = 'do not cut';
         }
-        if (redList1[8] == 'b') {
+        if (redList1[8] === 'b') {
           outcome = 'cut';
         }
-        if (redList1[8] == 'c') {
+        if (redList1[8] === 'c') {
           outcome = 'do not cut';
         }
       }
-    } else if (req.body.blue == 'on') {
-      if (req.body.a == 'on') {
+    } else if (req.body.blue === 'on') {
+      if (req.body.a === 'on') {
         blueList1.push('a');
-      } else if (req.body.b == 'on') {
+      } else if (req.body.b === 'on') {
         blueList1.push('b');
-      } else if (req.body.c == 'on') {
+      } else if (req.body.c === 'on') {
         blueList1.push('c');
       }
-      if (blueList1.length == 1) {
-        if (blueList1[0] == 'a') {
+      if (blueList1.length === 1) {
+        if (blueList1[0] === 'a') {
           outcome = 'do not cut';
         }
-        if (blueList1[0] == 'b') {
+        if (blueList1[0] === 'b') {
           outcome = 'cut';
         }
-        if (blueList1[0] == 'c') {
+        if (blueList1[0] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (blueList1.length == 2) {
-        if (blueList1[1] == 'a') {
+      } else if (blueList1.length === 2) {
+        if (blueList1[1] === 'a') {
           outcome = 'cut';
         }
-        if (blueList1[1] == 'b') {
+        if (blueList1[1] === 'b') {
           outcome = 'do not cut';
         }
-        if (blueList1[1] == 'c') {
+        if (blueList1[1] === 'c') {
           outcome = 'cut';
         }
-      } else if (blueList1.length == 3) {
-        if (blueList1[2] == 'a') {
+      } else if (blueList1.length === 3) {
+        if (blueList1[2] === 'a') {
           outcome = 'do not cut';
         }
-        if (blueList1[2] == 'b') {
+        if (blueList1[2] === 'b') {
           outcome = 'cut';
         }
-        if (blueList1[2] == 'c') {
+        if (blueList1[2] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (blueList1.length == 4) {
-        if (blueList1[3] == 'a') {
+      } else if (blueList1.length === 4) {
+        if (blueList1[3] === 'a') {
           outcome = 'cut';
         }
-        if (blueList1[3] == 'b') {
+        if (blueList1[3] === 'b') {
           outcome = 'do not cut';
         }
-        if (blueList1[3] == 'c') {
+        if (blueList1[3] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (blueList1.length == 5) {
-        if (blueList1[4] == 'a') {
+      } else if (blueList1.length === 5) {
+        if (blueList1[4] === 'a') {
           outcome = 'do not cut';
         }
-        if (blueList1[4] == 'b') {
+        if (blueList1[4] === 'b') {
           outcome = 'cut';
         }
-        if (blueList1[4] == 'c') {
+        if (blueList1[4] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (blueList1.length == 6) {
-        if (blueList1[5] == 'a') {
+      } else if (blueList1.length === 6) {
+        if (blueList1[5] === 'a') {
           outcome = 'do not cut';
         }
-        if (blueList1[5] == 'b') {
+        if (blueList1[5] === 'b') {
           outcome = 'cut';
         }
-        if (blueList1[5] == 'c') {
+        if (blueList1[5] === 'c') {
           outcome = 'cut';
         }
-      } else if (blueList1.length == 7) {
-        if (blueList1[6] == 'a') {
+      } else if (blueList1.length === 7) {
+        if (blueList1[6] === 'a') {
           outcome = 'do not cut';
         }
-        if (blueList1[6] == 'b') {
+        if (blueList1[6] === 'b') {
           outcome = 'do not cut';
         }
-        if (blueList1[6] == 'c') {
+        if (blueList1[6] === 'c') {
           outcome = 'cut';
         }
-      } else if (blueList1.length == 8) {
-        if (blueList1[7] == 'a') {
+      } else if (blueList1.length === 8) {
+        if (blueList1[7] === 'a') {
           outcome = 'cut';
         }
-        if (blueList1[7] == 'b') {
+        if (blueList1[7] === 'b') {
           outcome = 'do not cut';
         }
-        if (blueList1[7] == 'c') {
+        if (blueList1[7] === 'c') {
           outcome = 'cut';
         }
-      } else if (blueList1.length == 9) {
-        if (blueList1[8] == 'a') {
+      } else if (blueList1.length === 9) {
+        if (blueList1[8] === 'a') {
           outcome = 'cut';
         }
-        if (blueList1[8] == 'b') {
+        if (blueList1[8] === 'b') {
           outcome = 'do not cut';
         }
-        if (blueList1[8] == 'c') {
+        if (blueList1[8] === 'c') {
           outcome = 'do not cut';
         }
       }
-    } else if (req.body.black == 'on') {
-      if (req.body.a == 'on') {
+    } else if (req.body.black === 'on') {
+      if (req.body.a === 'on') {
         blackList1.push('a');
-      } else if (req.body.b == 'on') {
+      } else if (req.body.b === 'on') {
         blackList1.push('b');
-      } else if (req.body.c == 'on') {
+      } else if (req.body.c === 'on') {
         blackList1.push('c');
       }
-      if (blackList1.length == 1) {
-        if (blackList1[0] == 'a') {
+      if (blackList1.length === 1) {
+        if (blackList1[0] === 'a') {
           outcome = 'cut';
         }
-        if (blackList1[0] == 'b') {
+        if (blackList1[0] === 'b') {
           outcome = 'cut';
         }
-        if (blackList1[0] == 'c') {
+        if (blackList1[0] === 'c') {
           outcome = 'cut';
         }
-      } else if (blackList1.length == 2) {
-        if (blackList1[1] == 'a') {
+      } else if (blackList1.length === 2) {
+        if (blackList1[1] === 'a') {
           outcome = 'cut';
         }
-        if (blackList1[1] == 'b') {
+        if (blackList1[1] === 'b') {
           outcome = 'do not cut';
         }
-        if (blackList1[1] == 'c') {
+        if (blackList1[1] === 'c') {
           outcome = 'cut';
         }
-      } else if (blackList1.length == 3) {
-        if (blackList1[2] == 'a') {
+      } else if (blackList1.length === 3) {
+        if (blackList1[2] === 'a') {
           outcome = 'do not cut';
         }
-        if (blackList1[2] == 'b') {
+        if (blackList1[2] === 'b') {
           outcome = 'cut';
         }
-        if (blackList1[2] == 'c') {
+        if (blackList1[2] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (blackList1.length == 4) {
-        if (blackList1[3] == 'a') {
+      } else if (blackList1.length === 4) {
+        if (blackList1[3] === 'a') {
           outcome = 'cut';
         }
-        if (blackList1[3] == 'b') {
+        if (blackList1[3] === 'b') {
           outcome = 'do not cut';
         }
-        if (blackList1[3] == 'c') {
+        if (blackList1[3] === 'c') {
           outcome = 'cut';
         }
-      } else if (blackList1.length == 5) {
-        if (blackList1[4] == 'a') {
+      } else if (blackList1.length === 5) {
+        if (blackList1[4] === 'a') {
           outcome = 'do not cut';
         }
-        if (blackList1[4] == 'b') {
+        if (blackList1[4] === 'b') {
           outcome = 'cut';
         }
-        if (blackList1[4] == 'c') {
+        if (blackList1[4] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (blackList1.length == 6) {
-        if (blackList1[5] == 'a') {
+      } else if (blackList1.length === 6) {
+        if (blackList1[5] === 'a') {
           outcome = 'do not cut';
         }
-        if (blackList1[5] == 'b') {
+        if (blackList1[5] === 'b') {
           outcome = 'cut';
         }
-        if (blackList1[5] == 'c') {
+        if (blackList1[5] === 'c') {
           outcome = 'cut';
         }
-      } else if (blackList1.length == 7) {
-        if (blackList1[6] == 'a') {
+      } else if (blackList1.length === 7) {
+        if (blackList1[6] === 'a') {
           outcome = 'cut';
         }
-        if (blackList1[6] == 'b') {
+        if (blackList1[6] === 'b') {
           outcome = 'cut';
         }
-        if (blackList1[6] == 'c') {
+        if (blackList1[6] === 'c') {
           outcome = 'do not cut';
         }
-      } else if (blackList1.length == 8) {
-        if (blackList1[7] == 'a') {
+      } else if (blackList1.length === 8) {
+        if (blackList1[7] === 'a') {
           outcome = 'do not cut';
         }
-        if (blackList1[7] == 'b') {
+        if (blackList1[7] === 'b') {
           outcome = 'do not cut';
         }
-        if (blackList1[7] == 'c') {
+        if (blackList1[7] === 'c') {
           outcome = 'cut';
         }
-      } else if (blackList1.length == 9) {
-        if (blackList1[8] == 'a') {
+      } else if (blackList1.length === 9) {
+        if (blackList1[8] === 'a') {
           outcome = 'do not cut';
         }
-        if (blackList1[8] == 'b') {
+        if (blackList1[8] === 'b') {
           outcome = 'do not cut';
         }
-        if (blackList1[8] == 'c') {
+        if (blackList1[8] === 'c') {
           outcome = 'cut';
         }
       }
