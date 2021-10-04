@@ -86,3 +86,7 @@
   width:100px;
   font-size: 30px;
 }
+
+.module > .card {
+  margin-top: 5px;
+}
