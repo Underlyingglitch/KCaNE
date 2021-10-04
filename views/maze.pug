@@ -8,6 +8,7 @@ html
     div(align="center")
       img(src="http://www.bombmanual.com/web/img/module-icons/MazeComponent.svg" width="200px")
       h1 On The Subject of Mazes
+      h2 #{title}
       br
       br
       form(action="/maze" method="POST")
@@ -40,15 +41,15 @@ html
                     td(class="maze-grid-table-0") D
                     td(class="maze-grid-table-0") E
                     td(class="maze-grid-table-0") F
-                  tr
+                  tr(id="row1")
                     td(class="maze-grid-table-0") 1
-                    td(class="maze-grid-table-"+ a1 bgcolor=""+ a1color)
-                    td(class="maze-grid-table-"+ b1 bgcolor=""+ b1color)
-                    td(class="maze-grid-table-"+ c1 bgcolor=""+ c1color)
-                    td(class="maze-grid-table-"+ d1 bgcolor=""+ d1color)
-                    td(class="maze-grid-table-"+ e1 bgcolor=""+ e1color)
-                    td(class="maze-grid-table-"+ f1 bgcolor=""+ f1color)
-                  tr
+                    td(class="maze-grid-table-" style="border-left: 4px black solid")
+                    
+                    td(class="maze-grid-table-")
+                    td(class="maze-grid-table-")
+                    td(class="maze-grid-table-")
+
+                  tr(id="row2")
                     td(class="maze-grid-table-0") 2
                     td(class="maze-grid-table-"+ a2 bgcolor=""+ a2color)
                     td(class="maze-grid-table-"+ b2 bgcolor=""+ b2color)
@@ -93,5 +94,6 @@ html
               div(id="outField" align="center") #{title}
       br
       br
+      script(src="scripts/mazerender.js" mazeid=""+mazeid)
       a(href="http://localhost:3000")
         img(alt="wires" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

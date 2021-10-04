@@ -51,9 +51,9 @@ app.post('/', (req, res) => {
   }
 });
 
-app.get('/module/:moduleId', (req, res) => {
-  res.send(req.params.moduleId);
-});
+// app.get('/module/:moduleId', (req, res) => {
+//   res.send(req.params.moduleId);
+// });
 
 // require the routes here
 app.use('/', rootRouter);
