@@ -1,15 +1,6 @@
-const mazes = [
-  [
-    0000,1000,0001,0100,1000,1000,
-    0001,0110,1001,1100,1010,0010,
-    0001,1100,0011,0110,1010,0000,
-    0001,1110,1000,1001,1110,0000,
-    0000,1010,0011,0110,1011,0100,
-    0000,0011,0100,0001,0110,0000
-  ]
-];
-
 const express = require('express');
+require('./maze.services');
+const mazeService = new Maze();
 
 const router = express.Router();
 
@@ -30,15 +21,19 @@ router.get('/', (req, res) => {
     };
   }
   res.render('maze', {
-    title: 'maze',
-    mazes: mazes[0],
+    output: 'enter parameters',
+    rendermaze: [false, [null,null,null,null,null,null]],
   });
 });
 
 router.post('/', (req, res) => {
-
+  let output = "done!";
   res.render('maze', {
-    title: "post",
+    output: output,
+    rm: [true, mazes[1]],
+    rF: function(x) {
+      return mazeService.renderField(x);
+    },
   });
 });
 

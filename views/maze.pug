@@ -35,63 +35,17 @@ html
                 table(id="mazeGrid" cellspacing="0")  
                   tr
                     td(class="maze-grid-table-0" )
-                    td(class="maze-grid-table-0") A
-                    td(class="maze-grid-table-0") B
-                    td(class="maze-grid-table-0") C
-                    td(class="maze-grid-table-0") D
-                    td(class="maze-grid-table-0") E
-                    td(class="maze-grid-table-0") F
-                  tr(id="row1")
-                    td(class="maze-grid-table-0") 1
-                    td(class="maze-grid-table-" style="border-left: 4px black solid")
-                    
-                    td(class="maze-grid-table-")
-                    td(class="maze-grid-table-")
-                    td(class="maze-grid-table-")
-
-                  tr(id="row2")
-                    td(class="maze-grid-table-0") 2
-                    td(class="maze-grid-table-"+ a2 bgcolor=""+ a2color)
-                    td(class="maze-grid-table-"+ b2 bgcolor=""+ b2color)
-                    td(class="maze-grid-table-"+ c2 bgcolor=""+ c2color)
-                    td(class="maze-grid-table-"+ d2 bgcolor=""+ d2color)
-                    td(class="maze-grid-table-"+ e2 bgcolor=""+ e2color)
-                    td(class="maze-grid-table-"+ f2 bgcolor=""+ f2color)
-                  tr
-                    td(class="maze-grid-table-0") 3
-                    td(class="maze-grid-table-"+ a3 bgcolor=""+ a3color)
-                    td(class="maze-grid-table-"+ b3 bgcolor=""+ b3color)
-                    td(class="maze-grid-table-"+ c3 bgcolor=""+ c3color)
-                    td(class="maze-grid-table-"+ d3 bgcolor=""+ d3color)
-                    td(class="maze-grid-table-"+ e3 bgcolor=""+ e3color)
-                    td(class="maze-grid-table-"+ f3 bgcolor=""+ f3color)
-                  tr
-                    td(class="maze-grid-table-0") 4
-                    td(class="maze-grid-table-"+ a4 bgcolor=""+ a4color)
-                    td(class="maze-grid-table-"+ b4 bgcolor=""+ b4color)
-                    td(class="maze-grid-table-"+ c4 bgcolor=""+ c4color)
-                    td(class="maze-grid-table-"+ d4 bgcolor=""+ d4color)
-                    td(class="maze-grid-table-"+ e4 bgcolor=""+ e4color)
-                    td(class="maze-grid-table-"+ f4 bgcolor=""+ f4color)
-                  tr
-                    td(class="maze-grid-table-0") 5
-                    td(class="maze-grid-table-"+ a5 bgcolor=""+ a5color)
-                    td(class="maze-grid-table-"+ b5 bgcolor=""+ b5color)
-                    td(class="maze-grid-table-"+ c5 bgcolor=""+ c5color)
-                    td(class="maze-grid-table-"+ d5 bgcolor=""+ d5color)
-                    td(class="maze-grid-table-"+ e5 bgcolor=""+ e5color)
-                    td(class="maze-grid-table-"+ f5 bgcolor=""+ f5color)
-                  tr
-                    td(class="maze-grid-table-0") 6
-                    td(class="maze-grid-table-"+ a6 bgcolor=""+ a6color)
-                    td(class="maze-grid-table-"+ b6 bgcolor=""+ b6color)
-                    td(class="maze-grid-table-"+ c6 bgcolor=""+ c6color)
-                    td(class="maze-grid-table-"+ d6 bgcolor=""+ d6color)
-                    td(class="maze-grid-table-"+ e6 bgcolor=""+ e6color)
-                    td(class="maze-grid-table-"+ f6 bgcolor=""+ f6color)
+                    for l in ['A', 'B', 'C', 'D', 'E', 'F']
+                      td(class="maze-grid-table-0") #{l}
+                  each r, i in rm[1]
+                    tr()
+                      td(class="maze-grid-table-0") #{i+1}
+                        if rm[0]
+                          for f in r
+                            td(style=rF(f))
           tr
             td(height="50" )
-              div(id="outField" align="center") #{title}
+              div(id="outField" align="center") #{output}
       br
       br
       script(src="scripts/mazerender.js" mazeid=""+mazeid)
