@@ -1,5 +1,6 @@
 const express = require('express');
-require('./maze.services');
+const Maze = require('./maze.services');
+
 const mazeService = new Maze();
 
 const router = express.Router();
@@ -22,16 +23,23 @@ router.get('/', (req, res) => {
   }
   res.render('maze', {
     output: 'enter parameters',
-    rendermaze: [false, [null,null,null,null,null,null]],
+    rm: [false, [null, null, null, null, null, null], null],
   });
 });
 
 router.post('/', (req, res) => {
-  let output = "done!";
+  // eslint-disable-next-line prefer-const
+  let output = 'done!';
+  const id = mazeService.getMazeId(req.body.idInput);
+  // let id = mazeService.getMazeId('a1');
+  console.log(mazeService.getMaze(id));
+  const startcoord = mazeService.coordToId(req.body.startInput);
+  const endcoord = mazeService.coordToId(req.body.endInput);
+  console.log([startcoord, endcoord]);
   res.render('maze', {
-    output: output,
-    rm: [true, mazes[1]],
-    rF: function(x) {
+    output,
+    rm: [true, mazeService.getMaze(id), [startcoord, endcoord]],
+    rF(x) {
       return mazeService.renderField(x);
     },
   });

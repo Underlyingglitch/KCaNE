@@ -41,8 +41,14 @@ html
                     tr()
                       td(class="maze-grid-table-0") #{i+1}
                         if rm[0]
-                          for f in r
-                            td(style=rF(f))
+                          each f, i2 in r
+                            #{console.log([i, i2])}
+                            if rm[2][0][1] == i && rm[2][0][0] == i2
+                              td(style='background-color: green;'+ rF(f))
+                            else if rm[2][1][1] == i && rm[2][1][0] == i2
+                              td(style='background-color: red;'+ rF(f))
+                            else
+                              td(style=rF(f))
           tr
             td(height="50" )
               div(id="outField" align="center") #{output}
