@@ -23,7 +23,11 @@ router.get('/', (req, res) => {
   }
   res.render('maze', {
     output: 'enter parameters',
-    rm: [false, [null, null, null, null, null, null], null],
+    rm: [true, mazeService.getMaze(8), [[1, 1], [2, 2]]],
+    // rm: [false, [null, null, null, null, null, null], null],
+    rF(x) {
+      return mazeService.renderField(x);
+    },
   });
 });
 
@@ -32,10 +36,9 @@ router.post('/', (req, res) => {
   let output = 'done!';
   const id = mazeService.getMazeId(req.body.idInput);
   // let id = mazeService.getMazeId('a1');
-  console.log(mazeService.getMaze(id));
+  output = id;
   const startcoord = mazeService.coordToId(req.body.startInput);
   const endcoord = mazeService.coordToId(req.body.endInput);
-  console.log([startcoord, endcoord]);
   res.render('maze', {
     output,
     rm: [true, mazeService.getMaze(id), [startcoord, endcoord]],
