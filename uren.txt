@@ -1,6 +1,7 @@
 Rick:
 14-9-2021 [16:58-17:52] {Code cleanup};
 4-10-2021 [12:20-13:10] {Home pagina layout opnieuw gemaakt. Fout opgemerkt in de zoekfuntie. Nieuwe branch 'maze' aangemaakt}
+6-10-2021 [12:00=14:00] {Maze gemaakt}
 
 Menno:
 14-9-2021 [15:33-18:13] {Code editor opnieuw klaar gezet. Regels over syntax. Syntax gefixt van alle modules tot dit punt. Wires module getest.}; 
