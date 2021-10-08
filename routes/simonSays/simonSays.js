@@ -32,15 +32,7 @@ let vowel = false;
 router.post('/', (req, res) => {
   const letters = req.session.bominfo.serialNo.replace(/[0-9]/g, '');
 
-  if (letters.includes('a') == true) {
-    vowel = true;
-  } else if (letters.includes('e') == true) {
-    vowel = true;
-  } else if (letters.includes('o') == true) {
-    vowel = true;
-  } else if (letters.includes('i') == true) {
-    vowel = true;
-  } else if (letters.includes('u') == true) {
+  if (letters.includes('a') || letters.includes('e') || letters.includes('o') || letters.includes('i') || letters.includes('u')) {
     vowel = true;
   }
 
