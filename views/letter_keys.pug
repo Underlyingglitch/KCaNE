@@ -1,0 +1,20 @@
+doctype HTML
+html
+  head
+    title letterKeys
+    style
+      include style.css
+  body      
+    div(align="center")
+      img(src="https://ktane.timwi.de/HTML/img/Component/Letter%20Keys.svg" width="200px")
+      h1 On The Subject of Letter Keys
+      br
+      br
+      table(width="50%")
+        tr
+          th(height="50")
+            form(action="/letter_keys" method="POST")
+                input(type="number" name="input" value="" maxlength="2")
+      h1 #{output}
+      a(href="http://localhost:3000")
+        img(alt="letterKeys" src="https://thumbs.dreamstime.com/b/solved-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-changed-83570900.jpg" height="150px")

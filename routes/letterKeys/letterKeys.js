@@ -24,8 +24,31 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  const num = parseInt(req.body.input, 10);
+  let output = '';
+  const batteryCount = req.session.bominfo.aabatteries + req.session.bominfo.dbatteries;
+  if (num === 69) {
+    output = 'D';
+  } else
+  if (num % 6 === 0) {
+    output = 'A';
+  } else
+  if (batteryCount >= 2 && num % 3 === 0) {
+    output = 'B';
+  } else
+  if ((req.session.bominfo.serialNo.includes('c') || req.session.bominfo.serialNo.includes('e') || req.session.bominfo.serialNo.includes('3')) && (num >= 22 && num <= 79)) {
+    output = 'B';
+  } else
+  if (req.session.bominfo.serialNo.includes('c') || req.session.bominfo.serialNo.includes('e') || req.session.bominfo.serialNo.includes('3')) {
+    output = 'C';
+  } else
+  if (num < 46) {
+    output = 'D';
+  } else {
+    output = 'A';
+  }
   res.render('letter_keys', {
-    title: 'post',
+    output,
   });
 });
 
