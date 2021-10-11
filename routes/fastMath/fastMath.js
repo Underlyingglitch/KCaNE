@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
     if (Object.keys(req.session.bominfo).includes('port_serial')) {
       output += 14;
     }
-    if (req.session.bominfo.includes('f') || req.session.bominfo.includes('a') || req.session.bominfo.includes('s') || req.session.bominfo.includes('t')) {
+    if (req.session.bominfo.serialNo.includes('f') || req.session.bominfo.serialNo.includes('a') || req.session.bominfo.serialNo.includes('s') || req.session.bominfo.serialNo.includes('t')) {
       output -= 5;
     }
     if (req.session.bominfo.port_rj45 > 0) {
