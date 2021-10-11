@@ -14,6 +14,11 @@ html
         tr
           th(height="50")
             form(action="/battleship" method="POST")  
+      table(border="1")
+        each r in render
+          tr(width="20px" height="20px")
+            each c in r
+              td(width="20px" hieght="20px") #{c}
       br
       br
       a(href="http://localhost:3000")

@@ -1,4 +1,7 @@
 const express = require('express');
+const Battleship = require('./battleship.services');
+
+const battleshipService = new Battleship();
 
 const router = express.Router();
 
@@ -16,23 +19,25 @@ router.get('/', (req, res) => {
       port_serial: '2',
       port_rca: '0',
       snd: 'on',
-      sndlit: ['on', 'on'],
     };
   }
-  // hello
-  req.session.battleship = [];
+  let render = [
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+  ];
+  console.log(battleshipService.getFromSerial(0, 1, 1, req.session.bominfo.serialNo));
   res.render('battleship', {
-    title: null,
+    title: 'test',
+    render,
   });
 });
 
 router.post('/', (req, res) => {
-  if (!req.session.battleship) {
-    req.session.battleship = [];
-  }
-
   res.render('battleship', {
-    title: null,
+    title: 'post',
   });
 });
 
