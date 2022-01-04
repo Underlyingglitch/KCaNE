@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
     if (Object.keys(req.session.bominfo).includes('msa_lit')) {
       output += 20;
     }
-    if (Object.keys(req.session.bominfo).includes('port_serial')) {
+    if (req.session.bominfo.port_serial > 0) {
       output += 14;
     }
     if (req.session.bominfo.serialNo.includes('f') || req.session.bominfo.serialNo.includes('a') || req.session.bominfo.serialNo.includes('s') || req.session.bominfo.serialNo.includes('t')) {
@@ -53,7 +53,8 @@ router.post('/', (req, res) => {
     if (req.session.bominfo.port_rj45 > 0) {
       output += 27;
     }
-    if (req.session.bominfo.aabatteries + req.session.bominfo.dbatteries > 3) {
+    if ((parseInt(req.session.bominfo.aabatteries, 10)
+    + parseInt(req.session.bominfo.dbatteries, 10)) > 3) {
       output -= 15;
     }
     if (output > 99) {
