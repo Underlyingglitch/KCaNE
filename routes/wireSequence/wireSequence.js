@@ -20,6 +20,9 @@ router.get('/', (req, res) => {
   }
   res.render('wire_sequence', {
     title: '',
+    redList: [],
+    blueList: [],
+    blackList: [],
   });
 });
 
