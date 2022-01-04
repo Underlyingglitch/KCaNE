@@ -53,7 +53,8 @@ router.post('/', (req, res) => {
     if (req.session.bominfo.port_rj45 > 0) {
       output += 27;
     }
-    if ((req.session.bominfo.aabatteries + req.session.bominfo.dbatteries) > 3) {
+    if ((parseInt(req.session.bominfo.aabatteries, 10)
+    + parseInt(req.session.bominfo.dbatteries, 10)) > 3) {
       output -= 15;
     }
     if (output > 99) {
