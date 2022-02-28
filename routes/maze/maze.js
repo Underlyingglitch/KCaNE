@@ -36,12 +36,15 @@ router.post('/', (req, res) => {
   let output = 'done!';
   const id = mazeService.getMazeId(req.body.idInput);
   // let id = mazeService.getMazeId('a1');
-  output = id;
   const startcoord = mazeService.coordToId(req.body.startInput);
   const endcoord = mazeService.coordToId(req.body.endInput);
+  output = mazeService.solveMaze(id, endcoord, startcoord);
   res.render('maze', {
     output,
     rm: [true, mazeService.getMaze(id), [startcoord, endcoord]],
+    idInput: req.body.idInput,
+    startInput: req.body.startInput,
+    endInput: req.body.endInput,
     rF(x) {
       return mazeService.renderField(x);
     },
